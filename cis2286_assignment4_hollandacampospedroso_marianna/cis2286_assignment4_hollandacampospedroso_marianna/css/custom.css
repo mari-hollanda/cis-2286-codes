@@ -1,0 +1,48 @@
+/*
+* Author Name: Marianna Hollanda
+* Date: 2021-03-15
+* Purpose: CIS-2286 Assignment 4
+*/
+
+section{
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background: url(../image/marvelComics.jpg) center center;
+}
+
+#scarletWitchError, #blackPantherError, #doctorStrangeError, #alienRaceError, #cityError, #soulStoneError, #aliveError {
+    display: none;
+}
+
+#container {
+    margin: auto;
+    margin-top: 10px;
+    border: 1px solid green;
+    padding: 5px;
+    width: 800px;
+    text-align: left;
+    background-color: whitesmoke;
+}
+
+#container legend {
+    color: #780C08;
+    font-family: "Russo One", sans-serif;
+    font-size: 20px;
+    text-align: center;
+    margin: 1vh 0;
+}
+
+#container p {
+    font-size: 16px;
+    font-family: "Consolas", sans-serif;
+    padding: 0 1vw 0 0;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#container h5 {
+    font-weight: bold;
+    display: inline;
+}

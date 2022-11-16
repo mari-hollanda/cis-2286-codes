@@ -1,0 +1,37 @@
+/*
+Author: Don Bowers
+Creation Date: Mar 8, 2019
+Purpose: This page houses the styles used on the formatter main site.
+ */
+body {
+    background: rgba(18, 175, 193, 0.31);
+}
+#container {
+    margin: 40px auto 0 auto;
+    width: 600px
+}
+#container img {
+    float:left;
+}
+#logoArea {
+    height: 150px;
+}
+.companyTitle {
+    font-size: 40px;
+    margin-left: -25px;
+    position: relative;
+    top: 20px;
+}
+textarea {
+    width: 500px;
+    height: 100px;
+    border: 1px solid black;
+    font-size: 150%;
+}
+#outputDiv {
+    width: 500px;
+    margin-top: 50px;
+    color: white;
+    word-wrap: break-word;
+    background-color: white;
+}

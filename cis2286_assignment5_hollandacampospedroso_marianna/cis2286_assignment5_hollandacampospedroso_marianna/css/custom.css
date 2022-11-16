@@ -1,0 +1,89 @@
+/*
+* Name: Don Bowers
+* Date:
+* Purpose: Demonstrate the use of forms and functions to create a mini golf business interface.
+* Modified by Marianna Hollanda
+* Date: 2021-04-02
+* Purpose: CIS-2286 Assignment 5
+*/
+
+#container {
+    width: 800px;
+    margin: 0 auto;
+}
+
+form, input, select {
+    font-size: 90%;
+}
+
+/*#leftArea fieldset {*/
+/*    width: 200px;*/
+/*    background-color: #48ff48;*/
+/*    border: 1px solid black;*/
+/*    margin-bottom: 10px;*/
+/*}*/
+
+
+#totalArea {
+    float: left;
+    font-size: 90%;
+    width: 300px;
+    background-color: darksalmon;
+}
+
+#totalArea input {
+    width: 20px;
+    font-size: 90%;
+}
+
+/*#totalArea fieldset, #totalArea legend {*/
+/*    background-color: darksalmon;*/
+/*}*/
+
+#leftArea {
+    float: left;
+    background-color: aquamarine;
+}
+
+#leftArea a {
+    text-decoration: none;
+    color: black;
+    cursor: help;
+}
+
+h5 {
+    font-size: 60%;
+    margin-top: -20px;
+}
+
+#totalAfterTaxDiv {
+    font-weight: bolder;
+}
+
+#changeButton {
+    font-size: 90%;
+}
+
+#changeOutput {
+    display: none;
+    padding: 10px;
+    background-color: #74ff9b;
+    border: 1px solid black;
+}
+
+#discountString {
+    font-size: 90%;
+}
+
+
+#players{
+    background-color: green;
+}
+
+#form{
+    background-color: aquamarine;
+}
+
+#resetButton , #changeButton{
+    width: 100%;
+}

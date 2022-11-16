@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<!--
+##################################################
+Author: Marianna Hollanda Campos Pedroso
+Date: March 15, 2021
+Purpose: CIS-2286, Assignment 4
+Dependencies: None
+##################################################
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Marvel Trivia</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="css/custom.css" rel="stylesheet"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/utility.js"></script>
+    <script src="js/trivProcess.js"></script>
+    <noscript>
+        "You don't have Javascript turned on! In order for this page to function properly you must turn on Javascript."
+    </noscript>
+</head>
+
+<body>
+<section>
+    <div id="container">
+        <fieldset>
+            <legend>Marvel Pop Quiz</legend>
+            <p>How much do you know about the Marvel world?</p>
+
+            <form id="triviaGame">
+                <div id="scarletWitch">
+                    <label for="scarletWitch">1) What is the real first name of the Scarlet Witch?</label><br>
+                    <input type="text" id="scarletWitchName" name="scarletWitch">
+                    <button type="button" onclick="alert('Starts with the letter W.')">Hint</button>
+                    <br>
+                    <span id="scarletWitchError" class="errorStyle">Please type an answer.</span>
+                </div>
+
+                <div id="blackPanther">
+                    <label for="blackPanther">2) Who is Black Panther's sister?</label>
+                    <br>
+                    <input type="text" id="blackPantherName" name="blackPanther">
+                    <button type="button" onclick="alert('Starts with the letter S.')">Hint</button>
+                    <br>
+                    <span id="blackPantherError" class="errorStyle">Please type an answer.</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="doctorStrange">3) What kind of doctor is Stephen Strange?</label>
+                    <button type="button" onclick="alert('You can find this answer by watching the movie Doctor Strange.')">Hint</button>
+                    <select id="doctorStrange" class="form-control" name="doctorStrange">
+                        <option value="">Please select</option>
+                        <option value="Cardiothoracic">Cardiothoracic surgeon</option>
+                        <option value="Neurosurgeon">Neurosurgeon</option>
+                        <option value="Plastic">Plastic surgeon</option>
+                        <option value="Trauma">Trauma surgeon</option>
+                    </select>
+                    <span id="doctorStrangeError" class="errorStyle">Please select an option.</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="alienRace">4) What is the alien race that Loki sends to invade Earth in The
+                        Avengers?</label>
+                    <button type="button" onclick="alert('They are repitilians.')">Hint</button>
+                    <select id="alienRace" class="form-control" name="alienRace">
+                        <option value="">Please select</option>
+                        <option value="Skrulls">The Skrulls</option>
+                        <option value="Kree">The Kree</option>
+                        <option value="Chitauri">The Chitauri</option>
+                        <option value="Flerkens">The Flerkens</option>
+                    </select>
+                    <span id="alienRaceError" class="errorStyle">Please select an option.</span>
+                </div>
+
+                <div id="city" class="form-group">
+                    <h5>5) Which city do Hawkeye and Black Widow usually remember?</h5>
+                    <button type="button" onclick="alert('It was mentioned in The Avengers by the first time.')">Hint</button>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" id="budapest" name="city" value="Budapest"/>
+                            Budapest
+                        </label>
+                        <label>
+                            <input type="radio" id="prague" name="city" value="Prague"/>
+                            Prague
+                        </label>
+                        <label>
+                            <input type="radio" id="istanbul" name="city" value="Istanbul"/>
+                            Istanbul
+                        </label>
+                        <label>
+                            <input type="radio" id="sokovia" name="city" value="Sokovia"/>
+                            Sokovia
+                        </label>
+                    </div>
+                    <span id="cityError" class="errorStyle">Please select an option.</span>
+                </div>
+
+                <div id="soulStone" class="form-group">
+                    <h5>6) Who does the Mad Titan sacrifice to acquire the Soul Stone?</h5>
+                    <button type="button" onclick="alert('One of his favorite daughters.')">Hint</button>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" id="obsidian" name="sacrifice" value="Obsidian"/>
+                            Cull Obsidian
+                        </label>
+                        <label>
+                            <input type="radio" id="gamora" name="sacrifice" value="Gamora"/>
+                            Gamora
+                        </label>
+                        <label>
+                            <input type="radio" id="nebula" name="sacrifice" value="Nebula"/>
+                            Nebula
+                        </label>
+                        <label>
+                            <input type="radio" id="ebony" name="sacrifice" value="Ebony"/>
+                            Ebony Maw
+                        </label>
+                    </div>
+                    <span id="soulStoneError" class="errorStyle">Please select an option.</span>
+                </div>
+
+                <div id="alive" class="checkbox">
+                        <h5>7) Who remains alive after the end of Avengers: Endgame? No part-points for semi-correct
+                            answers.</h5>
+                    <button type="button" onclick="alert('You can find this answer by watching the movies Avengers: Infinity war, and Avengers: Endgame.')">Hint</button>
+                    <label><input type="checkbox" name="character" value="Tony"
+                                          class="form-check-input"/>Tony Stark</label>
+                            <label><input type="checkbox" name="character" value="Widow"
+                                          class="form-check-input"/>Black Widow</label>
+                            <label><input type="checkbox" name="character" value="Vision"
+                                          class="form-check-input"/>Vision</label>
+                            <label><input type="checkbox" name="character" value="Loki"
+                                          class="form-check-input"/>2018 Loki</label>
+                            <label><input type="checkbox" name="character" value="None"
+                                          class="form-check-input"/>None of the above</label><br>
+                        <span id="aliveError" class="errorStyle">Please select an option.</span>
+                </div>
+                <button type="button" id="submitButton">Submit</button>
+
+                <div id="outputDiv">
+
+
+                </div>
+            </form>
+        </fieldset>
+    </div>
+</section>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+</body>
+</html>

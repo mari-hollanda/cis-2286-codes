@@ -1,0 +1,50 @@
+<!--
+Author: Don Bowers,jdkitson
+Creation Date: Mar 8, 2020
+Purpose: This is the main page for TypeFormatter 1000. This page takes care of accepting the data from the user in the form. Javascript attached to this page (textFormatter.js) should take care of the client side validation. Note the textArea field gets disabled when the text inside gets to 70 chars+. As well, the form doesn't actually submit any data to our servers, it simply displays the text the user typed in the textArea with their chosen formatting options applied. Database functionality will be added in future revisions.
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>TypeFormatter 1000</title>
+        <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="css/formatter.css" />
+        <script src="js/typeFormatter.js"></script>
+    </head>
+    <body id="twitBody">
+        <div id="container">
+            <!-- twitter bird logo from https://blog.spoongraphics.co.uk/freebies/8-free-cute-and-simple-twitter-bird-vector-graphics -->
+            <div id="logoArea">
+                <img src="img/twit.png" alt="TypeFormatter1000"/><span class="companyTitle">TypeFormatter 1000</span>
+            </div>
+            <h3>Step 1. Enter the text you would like to format.</h3>
+            <form autocomplete="off">
+                <textarea id="myTa"></textarea><br>
+                Character Count as you Type: <span id="textLenOutput">0</span> (70 char max!)
+
+                <h3>Step 2. Choose Formatting</h3>
+                <select id="fontChoice">
+                    <option value="Arial">Arial</option>
+                    <option value="Verdana">Verdana</option>
+                    <option value="Anton">Anton</option>
+                    <option value="Comic Sans MS">Comic Sans</option>
+                </select>
+                <select id="colorChoice">
+                    <option value="blue">Blue</option>
+                    <option value="red">Red</option>
+                    <option value="green">Green</option>
+                </select>
+                <select id="textSize">
+                    <option value="20">20px</option>
+                    <option value="40">40px</option>
+                    <option value="50">50px</option>
+                </select>
+               <button type="button" id="submitButton">See Preview</button><button type="button" id="resetButton">Reset</button>
+            </form>
+            <h3>Output Preview</h3>
+            <div id="outputDiv"></div>
+        </div>
+    </body>
+</html>

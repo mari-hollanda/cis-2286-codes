@@ -1,0 +1,46 @@
+/*
+* Author Name: Marianna Hollanda
+* Date: 2021-03-05
+* Purpose: CIS-2286 Assignment 3
+*/
+
+section{
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background: url(../image/animalCrossing.jpg) center center;
+}
+
+#firstNameError, #lastNameError, #nintendoIDError, #housewaresQuantityError, #diyQuantityError {
+  display: none;
+}
+
+#container {
+    margin: auto;
+    margin-top: 15px;
+    border: 1px solid grey;
+    padding: 10px;
+    width: 500px;
+    background-color: aquamarine;
+}
+
+#container legend {
+    color: #780C08;
+    font-family: "Russo One", sans-serif;
+    font-size: 20px;
+    text-align: center;
+    margin: 1vh 0;
+}
+
+#container p {
+    font-size: 16px;
+    font-family: "Consolas", sans-serif;
+    padding: 0 1vw 0 0;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#container h5 {
+    font-weight: bold;
+}

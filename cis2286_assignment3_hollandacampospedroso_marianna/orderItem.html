@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<!--
+##################################################
+Author: Marianna Hollanda Campos Pedroso
+Date: March 5th, 2021
+Purpose: CIS-2286, Assignment 3
+Dependencies: None
+##################################################
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="css/custom.css" rel="stylesheet"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/utility.js"></script>
+    <script src="js/processOrder.js"></script>
+    <noscript>
+        "You don't have Javascript turned on! In order for this page to function properly you must turn on Javascript."
+    </noscript>
+</head>
+
+<body>
+<section>
+    <div id="container">
+        <fieldset>
+            <legend>Animal Crossing New Horizons Shopping</legend>
+            <p>Welcome to our ACNH Shopping! We are here to make your Animal Crossing experience the best it can be!</p>
+            <form id="formulary">
+
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" class="form-control"/>
+                    <span id="firstNameError" class="errorStyle">First Name is required</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" class="form-control"/>
+                    <span id="lastNameError" class="errorStyle">Last Name is required</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="nintendoID">Nintendo ID</label>
+                    <input type="text" id="nintendoID" class="form-control"/>
+                    <span id="nintendoIDError" class="errorStyle">Nintendo ID is required</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="housewaresQuantity">Each Housewares costs $10.00. How many items would you like?</label>
+                    <select id="housewaresQuantity" class="form-control" name="housewaresQuantity">
+                        <option value="">Please select</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                    <span id="housewaresQuantityError" class="errorStyle">Please select an option</span>
+
+                    <div class="form-group">
+                        <label for="diyQuantity">Each DIY Recipe costs $5.00. How many items would you like?</label>
+                        <select id="diyQuantity" class="form-control" name="diyQuantity">
+                            <option value="">Please select</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                        <span id="diyQuantityError" class="errorStyle">Please select an item amount</span>
+
+
+                        <div id="npc" class="checkbox"><h5>If you have a NPC in your village today, you can have a
+                            discount!</h5>
+                            <label><input type="checkbox" name="animalCrossingNpc[]" value=".00"
+                                          class="form-check-input"/> No NPC</label>
+                            <label><input type="checkbox" name="animalCrossingNpc[]" value=".10"
+                                          class="form-check-input"/> Redd (10%)</label>
+                            <label><input type="checkbox" name="animalCrossingNpc[]" value=".15"
+                                          class="form-check-input"/> Leif (15%)</label>
+                            <label><input type="checkbox" name="animalCrossingNpc[]" value=".20"
+                                          class="form-check-input"/> Kicks (20%)</label>
+                            <label><input type="checkbox" name="animalCrossingNpc[]" value=".25"
+                                          class="form-check-input"/> Celeste (25%)</label>
+                        </div>
+
+
+                        <div id="diy" class="form-group">
+                            <h5>Do you want a random DIY item? ($3.00 extra) </h5>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" id="checkDiyYes" name="checkDiy"/>
+                                    Yes
+                                </label>
+                                <label>
+                                    <input type="radio" id="checkDiyNo" name="checkDiy" checked="checked"/>
+                                    No
+                                </label>
+                            </div>
+                        </div>
+
+                        <div id="villager" class="form-group">
+                            <h5>Do you need a villager? ($5.00 extra)</h5>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" id="checkVillagerYes" name="checkVillager"/>
+                                    Yes
+                                </label>
+                                <label>
+                                    <input type="radio" id="checkVillagerNo" name="checkVillager"
+                                           checked="checked"/>
+                                    No
+                                </label>
+                            </div>
+                        </div>
+
+                        <div id="sellInfo">
+                            <h5>Do you have any remarks for the seller? </h5>
+                            <textarea name="sellInfo" rows="2" cols="64">Write something here</textarea>
+                            <br>
+                        </div>
+
+                        <span>Total Cost</span>
+                        <label for="totalCost"></label><input type="text" id="totalCost" value="$0.00"
+                                                              class="form-control" readonly/>
+                        <input type="submit" value="Submit" id="submitButton"/>
+                        <input type="reset" value="Clear" id="resetButton"/>
+                    </div>
+                </div>
+            </form>
+
+            <div id="outputDiv">
+
+            </div>
+
+        </fieldset>
+    </div>
+</section>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+</body>
+</html>
